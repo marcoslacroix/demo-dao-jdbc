@@ -7,9 +7,9 @@ public class Seller implements Serializable {
 
     private int id;
     private String name;
-    private String emaill;
+    private String email;
     private Date birthDate;
-    private double salary;
+    private double baseSalary;
 
     private Department department;
 
@@ -17,12 +17,12 @@ public class Seller implements Serializable {
 
     }
 
-    public Seller(int id, String name, String emaill, Date birthDate, double salary, Department department) {
+    public Seller(int id, String name, String email, Date birthDate, double baseSalary, Department department) {
         this.id = id;
         this.name = name;
-        this.emaill = emaill;
+        this.email = email;
         this.birthDate = birthDate;
-        this.salary = salary;
+        this.baseSalary = baseSalary;
         this.department = department;
     }
 
@@ -42,12 +42,12 @@ public class Seller implements Serializable {
         this.name = name;
     }
 
-    public String getEmaill() {
-        return emaill;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmaill(String emaill) {
-        this.emaill = emaill;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Date getBirthDate() {
@@ -58,12 +58,12 @@ public class Seller implements Serializable {
         this.birthDate = birthDate;
     }
 
-    public double getSalary() {
-        return salary;
+    public double getBaseSalary() {
+        return baseSalary;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setBaseSalary(double baseSalary) {
+        this.baseSalary = baseSalary;
     }
 
     public Department getDepartment() {
@@ -92,9 +92,9 @@ public class Seller implements Serializable {
         return "Seller{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", emaill='" + emaill + '\'' +
+                ", emaill='" + email + '\'' +
                 ", birthDate=" + birthDate +
-                ", salary=" + salary +
+                ", salary=" + baseSalary +
                 ", department=" + department +
                 '}';
     }
