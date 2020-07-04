@@ -8,12 +8,14 @@ import model.entities.Seller;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class Program {
 
     public static void main(String[] args) throws SQLException {
 
+        Scanner sc = new Scanner(System.in);
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
         System.out.println("=== Test1: seller findById ===");
@@ -43,5 +45,12 @@ public class Program {
         seller.setName("Martia Waine");
         sellerDao.update(seller);
         System.out.println("Updated completed");
+
+        System.out.println("=== Test6: seller Delete ===");
+        System.out.println("Enter id for delete test: ");
+        int idForDelete = sc.nextInt();
+        sellerDao.deleteById(idForDelete);
+        System.out.println("Delete completed");
+
     }
 }
